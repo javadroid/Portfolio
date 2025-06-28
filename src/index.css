@@ -95,7 +95,7 @@
   }
 
   .skill-card {
-    @apply glass-card p-6 hover:bg-white/20 transition-all duration-300 group cursor-pointer;
+    @apply glass-card p-6 hover:bg-white/20 transition-all duration-300 cursor-pointer;
   }
 
   .project-card {
