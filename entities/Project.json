@@ -1,0 +1,45 @@
+{
+  "name": "Project",
+  "description": "Portfolio projects showcase",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Project title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Project description"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Project image URL"
+    },
+    "demo_url": {
+      "type": "string",
+      "description": "Live demo URL"
+    },
+    "github_url": {
+      "type": "string",
+      "description": "GitHub repository URL"
+    },
+    "technologies": {
+      "type": "array",
+      "description": "Technologies used",
+      "items": {
+        "type": "string"
+      }
+    },
+    "category": {
+      "type": "string",
+      "description": "Project category (web, mobile, ai, blockchain)"
+    },
+    "featured": {
+      "type": "boolean",
+      "description": "Whether project is featured"
+    },
+    "status": {
+      "type": "string",
+      "description": "Project status (completed, in-progress, planned)"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "Experience",
+  "description": "Work experience and career history",
+  "properties": {
+    "company": {
+      "type": "string",
+      "description": "Company name"
+    },
+    "position": {
+      "type": "string",
+      "description": "Job position/title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Job description and achievements"
+    },
+    "start_date": {
+      "type": "string",
+      "description": "Start date"
+    },
+    "end_date": {
+      "type": "string",
+      "description": "End date (null for current position)"
+    },
+    "location": {
+      "type": "string",
+      "description": "Work location"
+    },
+    "company_logo": {
+      "type": "string",
+      "description": "Company logo URL"
+    },
+    "technologies": {
+      "type": "array",
+      "description": "Technologies used in this role",
+      "items": {
+        "type": "string"
+      }
+    },
+    "is_current": {
+      "type": "boolean",
+      "description": "Whether this is the current position"
+    }
+  }
+}

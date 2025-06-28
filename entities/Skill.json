@@ -1,0 +1,30 @@
+{
+  "name": "Skill",
+  "description": "Technical skills and proficiency levels",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Skill name"
+    },
+    "category": {
+      "type": "string",
+      "description": "Skill category (frontend, backend, mobile, ai, blockchain, tools)"
+    },
+    "proficiency": {
+      "type": "number",
+      "description": "Proficiency level (1-100)"
+    },
+    "icon": {
+      "type": "string",
+      "description": "Icon name or URL"
+    },
+    "years_experience": {
+      "type": "number",
+      "description": "Years of experience with this skill"
+    },
+    "is_featured": {
+      "type": "boolean",
+      "description": "Whether to feature this skill prominently"
+    }
+  }
+}
