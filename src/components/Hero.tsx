@@ -5,11 +5,11 @@ import { ArrowDown, Github, Linkedin, Mail, Download, Code, Sparkles } from 'luc
 const Hero = () => {
   const [currentRole, setCurrentRole] = useState(0);
   const roles = [
-    'Fullstack Developer',
-    'AI Automation Expert',
+    'Software Engineer',
+    'AI Automation Expert', 
     'Blockchain Developer',
-    'Mobile App Developer',
-    'Software Engineer'
+    'Full Stack Developer',
+    'Tech Entrepreneur'
   ];
 
   useEffect(() => {
@@ -59,9 +59,9 @@ const Hero = () => {
               </div>
               
               <p className="text-lg text-white/70 max-w-2xl leading-relaxed">
-                With 6+ years of experience crafting innovative solutions in fullstack development, 
-                AI automation, blockchain technology, and mobile applications. Based in Nigeria, 
-                building the future one line of code at a time.
+                With 6+ years of experience building intelligent systems, blockchain platforms, 
+                and AI-powered automation tools. I turn complex problems into clean, simple solutions 
+                that make a real impact. Based in Nigeria, working globally.
               </p>
             </div>
 
@@ -96,7 +96,7 @@ const Hero = () => {
                 <Github className="w-6 h-6" />
               </a>
               <a
-                href="https://linkedin.com/in/emmanuelochigbo"
+                href="https://linkedin.com/in/eochigbo"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/60 hover:text-portfolio-primary transition-colors p-2 hover:scale-110 transform"
@@ -104,7 +104,7 @@ const Hero = () => {
                 <Linkedin className="w-6 h-6" />
               </a>
               <a
-                href="mailto:emmanuel.ochigbo@email.com"
+                href="mailto:ochigboemmanuel32@gmail.com"
                 className="text-white/60 hover:text-portfolio-primary transition-colors p-2 hover:scale-110 transform"
               >
                 <Mail className="w-6 h-6" />

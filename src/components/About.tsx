@@ -1,61 +1,68 @@
 import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { User, Heart, Trophy, Coffee, Book, Music, Camera, Gamepad2 } from 'lucide-react';
+import { User, Heart, Trophy, Coffee, Book, Gamepad2, Code, Zap, Globe } from 'lucide-react';
 
 const About = () => {
   const [hoveredInterest, setHoveredInterest] = useState<string | null>(null);
 
   const interests = [
     {
-      id: 'cats',
-      name: 'Cats',
-      icon: '🐱',
-      description: 'Love spending time with these amazing, independent companions',
-      color: 'from-orange-400 to-orange-600'
-    },
-    {
-      id: 'chess',
-      name: 'Chess',
-      icon: '♟️',
-      description: 'Strategic thinking and tactical puzzles keep my mind sharp',
-      color: 'from-gray-600 to-gray-800'
-    },
-    {
-      id: 'coding',
-      name: 'Coding',
-      icon: '💻',
-      description: 'Building innovative solutions and learning new technologies',
+      id: 'automation',
+      name: 'AI Automation',
+      icon: '🤖',
+      description: 'Building intelligent systems that automate the boring stuff',
       color: 'from-blue-500 to-purple-600'
     },
     {
-      id: 'reading',
-      name: 'Reading',
-      icon: '📚',
-      description: 'Tech blogs, sci-fi novels, and continuous learning',
+      id: 'blockchain',
+      name: 'Blockchain',
+      icon: '⛓️',
+      description: 'Creating decentralized solutions with smart contracts',
+      color: 'from-yellow-500 to-orange-600'
+    },
+    {
+      id: 'problem-solving',
+      name: 'Problem Solving',
+      icon: '🧩',
+      description: 'Breaking down complex problems into simple, elegant solutions',
       color: 'from-green-500 to-teal-600'
     },
     {
-      id: 'music',
-      name: 'Music',
-      icon: '🎵',
-      description: 'From coding playlists to discovering new genres',
-      color: 'from-pink-500 to-rose-600'
+      id: 'mentoring',
+      name: 'Mentoring',
+      icon: '👨‍🏫',
+      description: 'Helping developers grow and avoid common pitfalls',
+      color: 'from-purple-500 to-pink-600'
     },
     {
-      id: 'gaming',
-      name: 'Gaming',
-      icon: '🎮',
-      description: 'Strategy games and puzzle solving for relaxation',
-      color: 'from-indigo-500 to-purple-600'
+      id: 'innovation',
+      name: 'Innovation',
+      icon: '💡',
+      description: 'Turning ideas into commercial products that impact lives',
+      color: 'from-indigo-500 to-blue-600'
+    },
+    {
+      id: 'simplicity',
+      name: 'Simplicity',
+      icon: '✨',
+      description: 'Making complex systems look easy and intuitive',
+      color: 'from-pink-500 to-rose-600'
     }
   ];
 
   const personalStats = [
-    { label: 'Years Coding', value: '6+', icon: Coffee },
-    { label: 'Projects Built', value: '50+', icon: Trophy },
-    { label: 'Technologies', value: '20+', icon: Book },
-    { label: 'Chess Rating', value: '1500+', icon: Gamepad2 }
+    { label: 'Years Experience', value: '6+', icon: Coffee },
+    { label: 'Developers Mentored', value: '20+', icon: User },
+    { label: 'Technologies Mastered', value: '15+', icon: Code },
+    { label: 'Projects Shipped', value: '50+', icon: Trophy }
+  ];
+
+  const coreBeliefs = [
+    { belief: 'Simplicity > Complexity', icon: '🎯' },
+    { belief: 'Impact > Hype', icon: '💥' },
+    { belief: 'Utility > Vanity', icon: '🔧' },
+    { belief: 'Shipping > Perfection', icon: '🚀' }
   ];
 
   return (
@@ -64,12 +71,12 @@ const About = () => {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            About <span className="text-gradient">Me</span>
+            About <span className="text-gradient">Emmanuel</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-portfolio-primary to-portfolio-accent mx-auto mb-6"></div>
-          <p className="text-lg text-white/70 max-w-3xl mx-auto">
-            Beyond the code, I'm a passionate individual with diverse interests that shape my perspective 
-            and creativity in everything I do.
+          <p className="text-lg text-white/70 max-w-4xl mx-auto">
+            A passionate software engineer who turns complex problems into clean, simple solutions. 
+            Operating at the intersection of engineering, entrepreneurship, and innovation.
           </p>
         </div>
 
@@ -86,24 +93,23 @@ const About = () => {
               
               <div className="space-y-4 text-white/80 leading-relaxed">
                 <p>
-                  Hi! I'm Emmanuel, a passionate fullstack developer based in Lagos, Nigeria. 
-                  My journey into technology started over 6 years ago, and it's been an incredible 
-                  adventure of continuous learning and innovation.
+                  Hi! I'm Emmanuel Ochigbo, a commercially-driven software engineer with over 6 years 
+                  of hands-on experience building web and mobile applications, backend systems, 
+                  blockchain platforms, and AI-powered automation tools.
                 </p>
                 
                 <p>
-                  When I'm not crafting code or solving complex problems, you'll find me enjoying 
-                  a good chess match or spending quality time with cats. These interests might seem 
-                  unrelated to programming, but they've actually shaped my approach to development - 
-                  chess taught me strategic thinking and patience, while cats remind me of the 
-                  importance of independence and curiosity.
+                  Based in Nigeria, I operate at the intersection of engineering, entrepreneurship, 
+                  and innovation. I'm passionate about simplifying complex problems, automating 
+                  workflows, and delivering high-impact solutions for fintech, service marketplaces, 
+                  crypto, and AI-based automation.
                 </p>
                 
                 <p>
-                  I believe in building technology that makes a real difference in people's lives, 
-                  whether it's through AI automation, blockchain solutions, or beautiful web applications. 
-                  Every project is an opportunity to learn something new and push the boundaries of 
-                  what's possible.
+                  My philosophy is simple: <em>"Automate the boring, innovate the essential—with 
+                  clean, simple solutions to real problems."</em> I believe in building technology 
+                  that makes a real difference, whether it's through AI automation, blockchain 
+                  solutions, or beautiful applications that just work.
                 </p>
               </div>
             </div>
@@ -122,16 +128,32 @@ const About = () => {
                 </div>
               ))}
             </div>
+
+            {/* Core Beliefs */}
+            <div className="glass-card p-6">
+              <h4 className="text-white font-semibold mb-4 flex items-center">
+                <Zap className="w-5 h-5 text-portfolio-primary mr-2" />
+                Core Beliefs
+              </h4>
+              <div className="grid grid-cols-2 gap-3">
+                {coreBeliefs.map((item, index) => (
+                  <div key={index} className="flex items-center space-x-2">
+                    <span className="text-lg">{item.icon}</span>
+                    <span className="text-white/80 text-sm">{item.belief}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
-          {/* Interests & Hobbies */}
+          {/* Interests & Approach */}
           <div className="animate-slide-in-right">
             <div className="glass-card p-8">
               <div className="flex items-center space-x-3 mb-8">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-r from-portfolio-accent to-portfolio-magenta flex items-center justify-center">
                   <Heart className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white">Interests & Hobbies</h3>
+                <h3 className="text-2xl font-bold text-white">What Drives Me</h3>
               </div>
 
               <div className="grid grid-cols-2 gap-4">
@@ -161,37 +183,48 @@ const About = () => {
                 ))}
               </div>
 
-              {/* Fun Facts */}
+              {/* Career Vision */}
               <div className="mt-8 pt-6 border-t border-white/10">
-                <h4 className="text-white font-semibold mb-4">Fun Facts</h4>
+                <h4 className="text-white font-semibold mb-4 flex items-center">
+                  <Globe className="w-5 h-5 text-portfolio-primary mr-2" />
+                  Vision & Goals
+                </h4>
                 <div className="space-y-3">
-                  <div className="flex items-center space-x-3">
-                    <Badge className="bg-orange-500/20 text-orange-400 border-orange-500/30">
-                      🐱 Cat Lover
+                  <div className="flex items-start space-x-3">
+                    <Badge className="bg-blue-500/20 text-blue-400 border-blue-500/30 mt-1">
+                      5 Years
                     </Badge>
                     <span className="text-white/70 text-sm">
-                      Believe cats are the perfect coding companions
+                      Become a tech leader building commercial products powered by AI and blockchain
                     </span>
                   </div>
                   
-                  <div className="flex items-center space-x-3">
-                    <Badge className="bg-gray-500/20 text-gray-400 border-gray-500/30">
-                      ♟️ Chess Player
+                  <div className="flex items-start space-x-3">
+                    <Badge className="bg-purple-500/20 text-purple-400 border-purple-500/30 mt-1">
+                      10 Years
                     </Badge>
                     <span className="text-white/70 text-sm">
-                      Strategic thinking translates to better code architecture
+                      Lead a global ecosystem of automation tools impacting millions
                     </span>
                   </div>
                   
-                  <div className="flex items-center space-x-3">
-                    <Badge className="bg-blue-500/20 text-blue-400 border-blue-500/30">
-                      🌍 Global Mindset
+                  <div className="flex items-start space-x-3">
+                    <Badge className="bg-green-500/20 text-green-400 border-green-500/30 mt-1">
+                      Mission
                     </Badge>
                     <span className="text-white/70 text-sm">
-                      Building solutions for users worldwide from Lagos
+                      Make complex things look easy through elegant engineering
                     </span>
                   </div>
                 </div>
+              </div>
+
+              {/* Quote */}
+              <div className="mt-6 p-4 bg-white/5 rounded-lg border-l-4 border-portfolio-primary">
+                <p className="text-white/80 italic text-sm">
+                  "I build smart apps and tools that help people and businesses automate and get things done perfectly."
+                </p>
+                <p className="text-white/60 text-xs mt-2">— Emmanuel's Elevator Pitch</p>
               </div>
             </div>
           </div>

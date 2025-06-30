@@ -66,19 +66,19 @@ const ContactSection = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'emmanuel.ochigbo@email.com',
-      href: 'mailto:emmanuel.ochigbo@email.com',
+      value: 'ochigboemmanuel32@gmail.com',
+      href: 'mailto:ochigboemmanuel32@gmail.com',
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+234 XXX XXX XXXX',
-      href: 'tel:+234XXXXXXXXX',
+      value: '+234 810 494 4428',
+      href: 'tel:+2348104944428',
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'Lagos, Nigeria',
+      value: 'Nigeria (WAT UTC+1)',
       href: null,
     },
   ];
@@ -92,12 +92,7 @@ const ContactSection = () => {
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      href: 'https://linkedin.com/in/emmanuelochigbo',
-    },
-    {
-      icon: Twitter,
-      label: 'Twitter',
-      href: 'https://twitter.com/emmanuelochigbo',
+      href: 'https://linkedin.com/in/eochigbo',
     },
   ];
 
