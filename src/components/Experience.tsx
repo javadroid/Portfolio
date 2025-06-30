@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { Experience } from '@/entities';
 import { Badge } from '@/components/ui/badge';
-import { Calendar, MapPin, Building } from 'lucide-react';
+import { Calendar, MapPin, Building, Users, TrendingUp } from 'lucide-react';
 
 const ExperienceSection = () => {
   const { data: experiences = [], isLoading } = useQuery({
@@ -44,8 +44,35 @@ const ExperienceSection = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-portfolio-primary to-portfolio-accent mx-auto mb-6"></div>
           <p className="text-lg text-white/70 max-w-3xl mx-auto">
             6+ years of building innovative solutions across diverse industries, 
-            from startups to enterprise-level applications.
+            from startups to enterprise-level applications, mentoring developers, and leading technical teams.
           </p>
+        </div>
+
+        {/* Career Highlights */}
+        <div className="grid md:grid-cols-3 gap-6 mb-16">
+          <div className="glass-card p-6 text-center">
+            <div className="w-12 h-12 bg-gradient-to-r from-portfolio-primary to-portfolio-accent rounded-lg flex items-center justify-center mx-auto mb-4">
+              <Users className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="text-white font-semibold mb-2">Mentorship Impact</h3>
+            <p className="text-white/70 text-sm">Mentored 20+ developers at Andela, improving team quality by 30%</p>
+          </div>
+          
+          <div className="glass-card p-6 text-center">
+            <div className="w-12 h-12 bg-gradient-to-r from-portfolio-accent to-portfolio-magenta rounded-lg flex items-center justify-center mx-auto mb-4">
+              <TrendingUp className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="text-white font-semibold mb-2">Technical Leadership</h3>
+            <p className="text-white/70 text-sm">Led cross-platform systems and mobile/web teams across multiple projects</p>
+          </div>
+          
+          <div className="glass-card p-6 text-center">
+            <div className="w-12 h-12 bg-gradient-to-r from-portfolio-magenta to-portfolio-primary rounded-lg flex items-center justify-center mx-auto mb-4">
+              <Building className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="text-white font-semibold mb-2">Diverse Industries</h3>
+            <p className="text-white/70 text-sm">Built solutions for fintech, logistics, crypto exchanges, and marketplaces</p>
+          </div>
         </div>
 
         {/* Timeline */}
@@ -94,6 +121,22 @@ const ExperienceCard = ({ experience, index, isLeft }: { experience: any; index:
     return `${years} year${years !== 1 ? 's' : ''} ${remainingMonths} month${remainingMonths !== 1 ? 's' : ''}`;
   };
 
+  // Get company-specific styling
+  const getCompanyStyle = (company: string) => {
+    switch (company.toLowerCase()) {
+      case 'jamforte technologies':
+        return 'border-l-blue-500';
+      case 'mrsoft':
+        return 'border-l-green-500';
+      case 'andela':
+        return 'border-l-purple-500';
+      case 'eplus network':
+        return 'border-l-orange-500';
+      default:
+        return 'border-l-portfolio-primary';
+    }
+  };
+
   return (
     <div
       className={`relative animate-fade-in ${
@@ -106,7 +149,7 @@ const ExperienceCard = ({ experience, index, isLeft }: { experience: any; index:
 
       {/* Content */}
       <div className={`ml-16 md:ml-0 ${isLeft ? 'md:mr-8' : 'md:ml-8'}`}>
-        <div className="experience-card">
+        <div className={`experience-card ${getCompanyStyle(experience.company)}`}>
           {/* Header */}
           <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
             <div className="flex items-center space-x-3 mb-2 md:mb-0">
