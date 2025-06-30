@@ -147,12 +147,16 @@ const Projects = () => {
 };
 
 const ProjectCard = ({ project, index, featured = false }: { project: any; index: number; featured?: boolean }) => {
+  const [showDemo, setShowDemo] = useState(false);
+
+  const shouldShowDemo = featured && !project.image_url && project.demo_url;
+
   return (
     <div
       className={`project-card animate-fade-in ${featured ? 'ring-2 ring-portfolio-primary' : ''}`}
       style={{ animationDelay: `${index * 0.1}s` }}
     >
-      {/* Project Image */}
+      {/* Project Image or Demo */}
       <div className="relative h-48 overflow-hidden rounded-t-2xl">
         {project.image_url ? (
           <img
@@ -160,6 +164,27 @@ const ProjectCard = ({ project, index, featured = false }: { project: any; index
             alt={project.title}
             className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
           />
+        ) : shouldShowDemo ? (
+          <div className="w-full h-full relative">
+            <iframe
+              src={project.demo_url}
+              className="w-full h-full border-0 scale-50 origin-top-left"
+              style={{ width: '200%', height: '200%' }}
+              title={`${project.title} Demo`}
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+              <Button
+                asChild
+                className="btn-gradient text-white"
+              >
+                <a href={project.demo_url} target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  View Full Demo
+                </a>
+              </Button>
+            </div>
+          </div>
         ) : (
           <div className="w-full h-full bg-gradient-to-br from-portfolio-primary/20 to-portfolio-accent/20 flex items-center justify-center">
             <span className="text-4xl">🚀</span>
