@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ref, push, set, get, remove, update, query, orderByChild, equalTo, onValue, off } from 'firebase/database';
 import { database } from './config';
 

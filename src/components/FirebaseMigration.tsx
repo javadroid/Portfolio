@@ -97,8 +97,8 @@ export function FirebaseMigration() {
           Firebase Migration Tools
         </CardTitle>
         <CardDescription>
-          Migrate your portfolio data from SuperDev to Firebase Realtime Database.
-          Make sure your Firebase configuration is set up in your .env file.
+          Your portfolio now uses Firebase Realtime Database.
+          Use the tools below to populate your database with sample data.
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">

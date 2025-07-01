@@ -17,7 +17,8 @@ export function FirebaseMigrationPage() {
           </Link>
           <h1 className="text-3xl font-bold mb-2">Firebase Migration</h1>
           <p className="text-muted-foreground">
-            Migrate your portfolio data from SuperDev to Firebase Realtime Database.
+            Your portfolio now uses Firebase Realtime Database instead of SuperDev.
+            Use the tools below to populate your database with sample data.
           </p>
         </div>
         
@@ -27,9 +28,9 @@ export function FirebaseMigrationPage() {
           <h2 className="text-xl font-semibold mb-3">Next Steps After Migration</h2>
           <ol className="list-decimal list-inside space-y-2 text-sm">
             <li>Verify your data appears in the Firebase Console</li>
-            <li>Update your components to use the new Firebase hooks</li>
-            <li>Test all functionality with the new Firebase backend</li>
-            <li>Remove SuperDev dependencies when ready</li>
+            <li>Update your components to use Firebase hooks</li>
+            <li>Test the new Firebase integration</li>
+            <li>SuperDev dependencies have been removed ✅</li>
             <li>Set up proper Firebase security rules for production</li>
           </ol>
         </div>
